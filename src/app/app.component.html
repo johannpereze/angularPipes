@@ -1,5 +1,16 @@
-<h1>{{nombre | uppercase}}</h1>
+<div class="text-layout">
+  <h1>{{ nombre | uppercase }}</h1>
 
-<button pButton (click)="mostrarNombre()" label="Mostrar Nombre"></button>
-<button pButton type="button" label="Click" ></button>
-<p-button label="Click" ></p-button>
+  <button
+    pButton
+    class="p-button-help"
+    (click)="mostrarNombre()"
+    icon="pi pi-check"
+    iconPos="right"
+    label="Mostrar Nombre"
+  ></button>
+</div>
+<br>
+<p-card [header]="nombre | titlecase" subheader="Subheader">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis illum, dolor aspernatur totam soluta.
+</p-card>
