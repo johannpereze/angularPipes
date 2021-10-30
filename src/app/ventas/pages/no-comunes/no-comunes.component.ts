@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { interval } from 'rxjs';
 import { Cliente } from '../../interfaces/interfaces';
 
 @Component({
@@ -32,7 +33,6 @@ export class NoComunesComponent {
     this.clientes.pop();
   }
   cambiarCliente() {
-
     this.cliente.nombre === 'Tatiana'
       ? (this.cliente = {
           nombre: 'Johann',
@@ -46,8 +46,34 @@ export class NoComunesComponent {
 
   //keyValuePipe
   persona = {
-    nombre:'Johann',
-    edad:35,
-    direccion: 'Medellín, Colombia'
-  }
+    nombre: 'Johann',
+    edad: 35,
+    direccion: 'Medellín, Colombia',
+  };
+
+  //Json Pipe
+  heroes = [
+    {
+      nombre: 'Superman',
+      vuela: true,
+    },
+    {
+      nombre: 'Robin',
+      vuela: false,
+    },
+    {
+      nombre: 'Acuaman',
+      vuela: false,
+    },
+  ];
+
+  //Async Pipe
+
+  miObservable = interval(1000);
+
+  valorpromesa = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Promesa resuelta :)');
+    }, 7000);
+  });
 }
