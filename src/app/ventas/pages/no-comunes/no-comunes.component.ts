@@ -43,4 +43,11 @@ export class NoComunesComponent {
           genero: 'femenino',
         });
   }
+
+  //keyValuePipe
+  persona = {
+    nombre:'Johann',
+    edad:35,
+    direccion: 'Medellín, Colombia'
+  }
 }
