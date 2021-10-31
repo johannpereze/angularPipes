@@ -8,6 +8,7 @@ import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 import { MayusculasPipe } from './pipes/mayusculas.pipe';
 import { VuelaPipe } from './pipes/vuela.pipe';
 import { ColorPipe } from './pipes/color.pipe';
+import { OrdenarPipe } from './pipes/ordenar.pipe';
 
 
 
@@ -19,7 +20,8 @@ import { ColorPipe } from './pipes/color.pipe';
     OrdenarComponent,
     MayusculasPipe,
     VuelaPipe,
-    ColorPipe
+    ColorPipe,
+    OrdenarPipe
   ],
   imports: [
     CommonModule,
